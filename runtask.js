@@ -15,37 +15,44 @@ function runtask(s, d, p) {
 
   for (i = 0; i < n; i++) {
     for (j = 0; j < i; j++) {
-      // compare priority (p)
+      // start with priority and 
       // if priority for one is higher than all others
       if (p[j] < p[j + 1]) {
         // append to solution array
-        task_order.push[i] = task_order;
 
         // calculate current time
-
-        // exit loop to check priority for remaining tasks
-      } else {
+        time = time + d[j + 1];
       }
+      // if same priority
+      else if ((p[j] = p[j + 1])) {
+        // compare start time (s)
+        if (s[j] < s[j + 1]) {
+          // if one start time for one is higher than all others, append to solution array
 
-      // if same priority, compare start time (s)
+          // calculate current time
+          time = time + d[j];
+        }
+        // if same start time
+        else if ((s[j] = s[j + 1])) {
+          // compare duration (d)
+          if (d[j] < d[j + 1]) {
+            // if one duration is higher than all others, append to solution array
 
-      // if one start time for one is higher than all others, append to solution array
+            // calculate current time
+            time = time + d[j];
+          }
+          // if same duration
+          else if ((d[j] = d[j + 1])) {
+            // compare position in array (i)
+            if (i[j] < i[j + 1]) {
+              // if one position is higher than all others, append to solution array
 
-      // calculate current time
-
-      // exit loop to check priority for remaining tasks
-
-      // if same start time, compare duration (d)
-
-      // if one duration is higher than all others, append to solution array
-
-      // calculate current time
-
-      // exit loop to check priority for remaining tasks
-
-      // if same duration, compare place in array (i)
-
-      // if one i is higher than others, append to solution array
+              // calculate current time
+              time = time + d[j];
+            }
+          }
+        }
+      }
 
       // calculate current time
 
